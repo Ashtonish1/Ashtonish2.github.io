@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dragon Ball</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+  *
+  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'VT323';
+    font-size: 32px;
+  }
+   body{
+    min-height: 100vh;
+    background: linear-gradient(#524aff, #ffffff);
+   }
+   header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+   }
+   header .logo{
+    
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size:  2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+   }
+   header ul{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+   }
+   header ul li{
+    
+    list-style: none;
+    margin-left: 20px;
+   }
+   header ul li a{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #fff;
+    border-radius: 20px;
+   }
+   header ul li a:hover, 
+   header ul li a.active
+   {
+    background: #000078;
+    color: #FF2D00;
+    text-shadow: -3.5px 5px 5px #081800;
+   }
+section{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section::before{
+  content:'';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top,#78A8F8, transparent);
+  z-index: 250;
+}
+section img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 8;  
+  pointer-events: none;
+}
+#text{
+  position: absolute; 
+  color: #FF2D00;
+  white-space: nowrap;
+  font-size: 7.5vw;
+  transform: translateY(70px);
+  z-index: 12;
+  text-shadow: -3.5px 5px 5px #081800;
+}
+#btn{
+  text-decoration: none;
+  transform: translateY(190px);
+  display: inline-block;
+  padding: 5px 30px;
+  border-radius: 40px;
+  background: #000078;
+  color: #FF2D00;
+  font-size: 1.5em;
+  z-index: 750;
+  text-shadow: -3.5px 5px 5px #081800;
+}
+
+#btn2{
+  text-decoration: none;
+  transform: translateY(2px);
+  display: inline-block;
+  padding: 2px 20px;
+  border-radius: 20px;
+  background: #D8E8F8;
+  color: #A00000;
+  font-size: 0.85em;
+  z-index: 750;
+  text-shadow: -3.5px 5px 10px #081800;
+}
+
+.sec{
+  position: relative;
+  padding: 100px;
+  background: #78A8F8;
+  
+}
+.sec h2{
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: white;
+  text-shadow: -3.5px 5px 5px #081800;
+}
+.sec p{
+  font-size: 1.2em;
+  color: #fff;
+  text-shadow: -3.5px 5px 5px #081800;
+}
+.gallerytext{
+        font-size: 100px;
+        text-align: center;
+        font-family:'VT323';
+        color:rgb(0, 0, 0);
+        padding-top: 90px;
+        text-shadow: 3px 3px #3F3F3F;
+}
+.frame{
+        border: 10px solid #0004FF;
+        width: 20%;
+        height: 50%;
+        background-color: rgb(255, 255, 255);
+        padding-right: 45px;
+        margin-top: 5%;
+        box-shadow: 10px 10px #FF2D00;
+}
+
+.container{
+        display: flex;  
+}
+.frame2{
+        border: 10px solid #c06600;
+        width: 20%;
+        padding-left: 10px;
+        height: 50%;
+        padding-top: 2%;
+        padding-right: 1.8%;
+        padding-bottom: 2%;
+        background-color: rgb(255, 255, 255);
+        margin-top: 5%;
+        width: 21.4%;
+        height: 22%;
+        margin-left: 38%;
+        text-align: center;
+    }
+    #border1{
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 1);
+        border-radius: 5px;
+        background-color: rgb(0, 0, 0);
+        width: 100%;
+        padding-right: 100px;
+        height: 20%;
+        margin-top: 5%;
+        margin-left: 3%;
+    }
+
+    #pborder{
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 1);
+        border-radius: 5px;
+        background-color: rgb(0, 0, 0);
+        width: 100%;
+        padding-right: 100px;
+        padding-left: 100px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        height: 20%;
+        margin-top: 5%;
+        margin-left: 1%;
+    }
+    #description{
+        font-size: 20px;
+        margin-bottom: 35px;
+        padding-top: 30px;
+        margin-left: 30px;
+        color: lightgrey
+    }
+
+    #description2{
+        font-size: 30px;
+        margin-bottom: 35px;
+        padding-top: 30px;
+        margin-left: 30px;
+        color: black;
+        text-shadow:3px 1px 2px white;
+        font-weight: bolder;
+    }
+    #gallery{
+        background-image: url(https://wallpaperaccess.com/full/9818.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        backface-visibility: initial;
+        padding-bottom: 100px;
+    }
+    #gallery2{
+        background-image: url(https://wallpaperaccess.com/full/9818.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        backface-visibility: initial;
+        padding-top: 100px;
+    }
+
+    #button3{
+        text-decoration: none;
+        padding: 5px 20px;
+        border-radius: 50px;
+        background: rgb(255, 253, 253);
+        color: rgb(0, 0, 0);
+        font-size: 1.5em;
+        display: inline-block;
+        z-index: 10000;
+        font-family: 'VT323';
+        margin-bottom: 0%;
+        margin-left: 2%;
+    }
+  </style>
+
+<script>
+function position()
+{
+let purpose = prompt("Choose Origin: [Extra Characters, Kami, God and Angel, Main Trio]" );
+
+if (purpose == "Kami")
+{
+    window.location="#Kami";
+}
+else if(purpose == "Extra Characters")
+{
+window.location="#Extra Characters";
+}
+else if(purpose == "God and Angel")
+{
+window.location="#God and Angel";
+}
+else if(purpose == "Main Trio")
+{
+window.location="#Main Trio";
+}
+}
+</script>
+</head>
+<body>
+<header>
+<a href="https://en.dragon-ball-official.com" style="color: #FF2D00;">DragonBall Official Site</a>
+<ul>
+<li><a href="#home" class="active">HOME</a></li>
+<li><a href="#ABOUT">SYPNOSIS</a></li>
+<li><a href="#gallery">GALLERY</a></li>
+<li><a href="#about me">ABOUT ME</a></li>
+<li><a href="#Extra Characters">CHARACTERS</a></li>
+<div id="btn2" onclick="position()" value="Redirect Me">Search</div>
+</ul>
+</header>
+<section>
+<img src="https://64.media.tumblr.com/f2664becdf5237599d40c52f0adaf0fb/tumblr_nr2vqnCdks1r72ht7o3_540.gifv">
+<h2 id="text"> Explore the World of DragonBall</h2>
+ 
+
+  
+</section>
+<div id="gallery">
+<div class="gallerytext" style="color: #0004FF;">The Original Characters</div>
+    
+<div id="Kami">
+<div class="gallerytext" id="Kami" style="color: #0004FF;">The Kami</div>
+<div class="container">
+<div class="frame"><img src="https://comicvine.gamespot.com/a/uploads/scale_small/1/11433/599606-dende.jpg" width="237" height="140" alt="Dende"></div>
+<div id="border1">
+<p id="description" style="color: #FF2D00;">Dende is a Namekian with a unique gift that allows him to heal others. 
+He is the 108th son of Grand Elder Guru. On Goku's request, Dende becomes the Earth's Guardian in Kami's place. 
+He continues his role as Guardian for the rest of the series, helping the protagonists during their adventures whenever he can.</p>
+</div>
+</div>
+
+<div id="Main Trio">
+<div class="gallerytext" id="Main" style="color: #0004FF;">The Main Trio</div>
+<div class="container">
+<div class="frame"><img src="https://www.denofgeek.com/wp-content/uploads/2022/08/Dragon-Ball-Super-Super-Hero-Piccolo-Powers-Up.jpg?resize=768%2C432" width="237" height="150" alt="Picoolo"></div>
+<div id="border1">
+<p id="description" style="color: #FF2D00;">Piccolo is a very tall and muscular Namekian. While greatly resembling his father/incarnation, 
+he is noticeably shorter and somewhat thinner. He also has a more solid facial structure with less pronounced cheekbones, 
+a rounder chin, and a straight nose. Piccolo only has four fingers with black nails in the Dragon Ball manga, 
+but five fingers with white nails in the anime series and the Dragon Ball Super manga. He has several patches on his arms and other parts of his body, 
+which are pink in the anime and yellow in the manga.</p>
+</div>  
+</div>
+
+<div class="container">
+<div class="frame"><img src="https://wegotthiscovered.com/wp-content/uploads/2023/06/Dragon-Ball-Goku.jpg" width="237" height="170" alt="Goku"></div>
+<div id="border1">
+<p id="description" style="color: #FF2D00;">Son Goku, born Kakarot, is a Saiyan raised on Earth and the main protagonist of the Dragon Ball series. 
+He is the secondborn, as well as youngest child and son of Bardock and Gine, the husband of Chi-Chi, 
+and the father of Gohan and Goten. Originally sent to Earth by his parents as an infant, Kakarot was adopted by Grandpa Gohan and renamed Son Goku. 
+A head injury at an early age altered Goku's memory, 
+ridding him of his initial destructive nature and allowing him to grow up to become one of Earth's greatest defenders. Goku constantly strives and 
+trains to be the greatest warrior possible, which has kept the Earth and the universe safe from destruction multiple times.</p>
+</div>
+</div>
+
+<div class="container">
+<div class="frame"><img src="https://media.vandalsports.com/i/640x360/11-2020/2020119123544_1.jpg.webp" width="237" height="180" alt="Vegeta"></div>
+<div id="border1">
+<p id="description" style="color: #FF2D00;">Vegeta more specifically Vegeta IV recognized as the prince of the fallen Saiyan race and the husband of Bulma, 
+the father of Trunks and Bulla, the eldest son of King Vegeta, as well as one of the main characters of the Dragon Ball series. 
+Regal, egotistical, and full of pride, Vegeta was once a ruthless, cold-blooded warrior and outright killer, 
+but later abandoned his position in the Frieza Force for a peaceful life on Earth. 
+He would repeatedly fight alongside Universe 7's most powerful warriors in order to protect Earth and his family, as well as to surpass Goku in power. 
+Vegeta's strong character development has received high praise and is regarded as the biggest in the series.
+He initially debuted as the main antagonist of the Vegeta Saga but progressed into a more anti-heroic tritagonist role for the rest of Dragon Ball Z. 
+Since the Majin Buu Saga and going into Dragon Ball Super, Vegeta has been the main deuteragonist/secondary protagonist behind Goku. </p>
+</div>
+</div>
+
+<div id="God and Angel">
+<div class="gallerytext" id="God and Angel" style="color: #0004FF;">The God and Angel</div>
+<div class="container">
+<div class="frame"><img src="https://www.looper.com/img/gallery/dragon-ball-who-was-god-of-destruction-before-beerus-how-powerful-were-they/intro-1696890886.webp" width="237" height="200" alt="Beerus"></div>
+<div id="border1">
+<p id="description" style="color: #FF2D00;">Beerus is the God of Destruction of Universe 7. He is accompanied by his martial arts teacher and attendant, Whis.
+Beerus' twin brother is Champa, the God of Destruction of Universe 6. 
+Beerus is the main antagonist of the Dragon Ball Z: Battle of Gods film and the God of Destruction Beerus Saga but becomes a supporting character in later sagas.</p>
+</div>
+</div>
+
+<div class="container">
+<div class="frame"><img src="https://qph.cf2.quoracdn.net/main-qimg-f08ede7d28448ebd303be8851961c072-lq" width="237" height="200" alt="Whis"></div>
+<div id="border1">
+<p id="description" style="color: #FF2D00;">Whis is the Guide Angel Attendant of Universe 7's God of Destruction, Beerus, as well as his Martial Arts teacher. 
+Along with the other angels, he is a child of the Grand Minister. Like all attendants,
+he is bound to the service of his deity and usually does not leave Beerus unaccompanied. </p>
+</div>
+</div>
+<div id="Extra Characters">
+<div class="gallerytext" id="Extra Characters" style="color: #0004FF;">Other Characters</div>
+<div class="container">
+<div class="frame"><img src="https://cms-combimedia-master.s3.us-east-2.amazonaws.com/posts/9645/conversions/Gohan-large.jpg" width="237" height="200" alt="Gohan"></div>
+<div id="border1">
+<p id="description" style="color: #FF2D00;">Son Gohan is a half-breed Saiyan and one of the most prominent characters in the Dragon Ball series. 
+  He is the elder son of the series' primary protagonist Goku and his wife Chi-Chi, the older brother of Goten, 
+  the husband of Videl and father to Pan. He is named after Goku's adoptive grandfather, Gohan Unlike his father, 
+  Gohan is a brilliant scholar and lacks a passion for fighting, preferring to do so only when his loved ones are threatened. 
+  Nevertheless, he spends much of his life participating in the defense of Earth, often helping to turn the tides when the dormant depths of his power are unleashed.</p>
+</div>
+</div>
+
+<div class="container">
+<div class="frame"><img src="https://preview.redd.it/usdqw01rpp8b1.jpg?width=475&format=pjpg&auto=webp&s=6cd6d77cd6dffad7f8e1f8f4d16e059494949bee" width="237" height="200" alt="Goten"></div>
+<div id="border1">
+<p id="description" style="color: #FF2D00;">Son Goten is the youngest son of Goku and his wife Chi-Chi, making him a Saiyan and Earthling hybrid. Goten is Gohan's younger brother and Trunks' best friend.</p>
+</div>
+</div>
+
+<div class="container">
+<div class="frame"><img src="https://static1.srcdn.com/wordpress/wp-content/uploads/2023/05/super-saiyan-trunks.jpg?q=50&fit=contain&w=1140&h=&dpr=1.5" width="237" height="200" alt="Trunks"></div>
+<div id="border1">
+<p id="description" style="color: #FF2D00;">Trunks is a Human-type Earthling/Saiyan hybrid, the firstborn child and only son of Vegeta and Bulma and the older brother of Bulla.</p>
+</div>
+</div>
+
+<div class="container">
+<div class="frame"><img src="https://i.redd.it/l8bio0285hn51.jpg" width="237" height="200" alt="Android 17"></div>
+<div id="border1">
+<p id="description" style="color: #FF2D00;">Android 17, when he was an ordinary human, is the younger twin brother of Android 18 and Dr. Gero's seventeenth android creation,
+designed to serve Gero's vendetta against Goku. Despite his interests not initially deviating from this expectation, 
+Android 17 takes it upon himself to kill Dr. Gero, who is uncooperative with Android 18's curiosity in activating Android 16 and deemed inferior by 17. 
+Android 17 makes his return a decade later in Dragon Ball Super, working as a national park ranger on a remote island, preserving wildlife from poachers.
+He is married and has a child, with two more children being adopted. 
+He is asked by Goku to join Team Universe 7 in the Tournament of Power and due to Goku and Frieza's sacrifice to take out Jiren, 
+he is left as the sole fighter remaining by the end of the tournament making him the winner, and thus the one who gets to make the wish on the Super Dragon Balls.</p>
+</div>
+</div>
+
+<div class="container">
+<div class="frame"><img src="https://i.ytimg.com/vi/RDuekSj1OKQ/maxresdefault.jpg" width="237" height="200" alt="Android 18"></div>
+<div id="border1">
+<p id="description" style="color: #FF2D00;">Android 18, is the older twin sister of Android 17 and Dr. Gero's eighteenth android creation, 
+  designed to serve Gero's vendetta against Goku. While her interests do not initially deviate from this expectation, 
+  her curiosity to activate Android 16, in spite of Gero's orders not to do so, leads Android 17 to take it upon himself to rebel and murder Gero. 
+  Eventually, Android 18 becomes a member of the Z Fighters, as well as the wife of Krillin and the mother of their daughter Marron.</p>
+</div>
+</div>
+
+              <br id="About Me">
+                <div class="gallerytext" id="about me" style="color: #0004FF;">About Me</div>
+              <div class="container">
+                <div class="frame"><img src="https://scontent.fmnl4-2.fna.fbcdn.net/v/t39.30808-6/394302234_6951144768283907_1034123411836760445_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeEAN797t1rnjlJCi9SfseKv0OOUhk4hplDQ45SGTiGmUAjj1rH39K7SHFRglNblUmd9bm9xzSHDsP12hMcvsEWi&_nc_ohc=_IxXrYAKHIAAX-Lzh4G&_nc_ht=scontent.fmnl4-2.fna&oh=00_AfA7S-UDp8cdosEVIsX-I2-P4WAsL2zZtGZ0ZbMfERy7rQ&oe=655F109B" width="237" height="200" alt="Me"></div>
+                  <div id="border1">
+                   <p id="description" style="color: #FF2D00;">My Name: Jorge Kenneth T. Camama
+                    <br> </br> My Age: 21
+                    <br> </br> My Birthdate: November 20, 2002
+                    <br> </br> My Hobbies: Watching Animes, Playing Online Games like League of Legends, Farlight 84, Tekken 7
+                    <br> </br>My Sports: Cycling, Running, Swimming, Badminton, Basketball, Volleyball
+                    <br> </br> Schools:
+                    <br> </br>          Gr. 1-6 - Imus Unida Christian School.
+                    <br> </br>          Gr. 7-8 - Imus Institute Science and Technology.
+                    <br> </br>          Gr. 9-12 - Imus Unida Christian School.
+                    <br> </br>          2022-Present - Feu-Institute of Technology.
+                    <br> </br>My Course/Program: BSIT-AGD(Bachelor of Science in Information Technology Specialization in Animation and Game Developer).
+                    
+                  </p>
+                    </div>
+                    </div>
+                    <div id="ABOUT">
+                      <div class="description2">
+                        <div id="border1">
+                          <h2 class="gallerytext" style="color: #0004FF;">ABOUT THE SERIES<h2>
+                              <p id="description2" style="color: #FF2D00;">Dragon Ball follows the journey of Son Goku, a Saiyan warrior with incredible strength, 
+                                as he navigates various adventures in search of the powerful Dragon Balls. These mystical orbs, when gathered, 
+                                grant the ability to summon a dragon who will grant one wish to the collector. The series begins with Goku's childhood, 
+                                his discovery of the Dragon Balls, and his meeting with Bulma, a girl searching for the orbs to fulfill her desires. Together, 
+                                they embark on a quest to locate all seven Dragon Balls, encountering friends and foes along the way. As the story progresses, 
+                                Goku grows stronger through martial arts training and battles against increasingly powerful adversaries. 
+                                The series evolves from light-hearted adventures to intense battles, introducing various arcs, enemies, 
+                                and transformations like the Super Saiyan forms. Dragon Ball explores themes of friendship, perseverance, 
+                                personal growth, and the pursuit of strength. It's known for its action-packed battles, humor, and memorable characters. 
+                                Throughout the series, Goku and his allies face challenges that test their limits, leading to moments of heroism, sacrifice,
+                                and personal development.
+                      </div>
+                    </div>
+              
+                 <br> </br>   
+              <a href="#" id="button3" style="color: #000078;">Back</a>
+  <footer style="background-color: rgb(31, 221, 255)0, ; padding: 20px;">
+    <div style="text-align: center;">
+       
+        <a href="https://www.facebook.com/Ashtonish1.goku/"><img src="https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-original-577x577/s3/072013/untitled-2_2.png?itok=AkOByYK9" width="30" height="30" alt="Facebook"></a>
+        <a href="https://www.instagram.com/jkcamama/"><img src="https://i.pinimg.com/564x/dc/70/7c/dc707c0e2e4a1883d4ebb81d107aec9a.jpg" width="30" height="30" alt="Instagram"></a>
+        <!-- Phone Number -->
+        <p> My Phone Number: <span id="phone_number_placeholder" style="color: #FF2D00; ">09156390467</span></p>
+    </div>
+
+</footer>
+</body>
+
+</html>
